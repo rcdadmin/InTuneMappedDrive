@@ -13,6 +13,19 @@ $driveMappingConfig=@()
 
 $dnsDomainName= "rcd.local"
 
+$driveMappingConfig+= [PSCUSTOMOBJECT]@{
+    DriveLetter = "L"
+    UNCPath= "\\rcd-fs.rcd.local\Compliance"
+    Description="Compliance"
+}
+
+
+$driveMappingConfig+= [PSCUSTOMOBJECT]@{
+    DriveLetter = "P"
+    UNCPath= "\\rcd-fs.rcd.local\Photos"
+    Description="Photos"
+}
+
 
 $driveMappingConfig+= [PSCUSTOMOBJECT]@{
     DriveLetter = "S"
@@ -26,6 +39,7 @@ $driveMappingConfig+=  [PSCUSTOMOBJECT]@{
     UNCPath= "\\rcd-fs.rcd.local\Scans"
     Description="Scans"
 }
+
 
 
 ######################################################################
